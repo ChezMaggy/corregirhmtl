@@ -3443,6 +3443,18 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(updateMobileMenuActiveState, 50);
         });
     });
+
+    // Adaptación de confirmación visual para Arma Tu Pizza en la tarjeta principal
+    if (typeof armaTuPizzaApp !== 'undefined') {
+        var origArmaTuPizzaAddToCart = armaTuPizzaApp.addToCart;
+        armaTuPizzaApp.addToCart = function(btn) {
+            var targetBtn = document.getElementById('add-btn-27');
+            origArmaTuPizzaAddToCart.call(this, targetBtn || btn);
+            if (targetBtn && targetBtn.dataset.isAnimating === 'true') {
+                targetBtn.innerHTML = '<span>✓ Agregado</span>';
+            }
+        };
+    }
 });
 </script>
 
