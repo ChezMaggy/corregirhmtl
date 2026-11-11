@@ -1079,7 +1079,7 @@ const calzoneAmigustoApp = {
         limit: 6,
         selected: [],
         name: 'Calzone A Mi Gusto',
-        price: 31.00,
+        price: 32.00,
         img: 'IM/CAL.jpg'
     },
 
@@ -2159,7 +2159,7 @@ function addCalzoneVegToCart(btn) {
 
     const oliveType = selectedOlive.getAttribute('data-type');
     const name = `Calzone Vegetariano (Aceitunas ${oliveType})`;
-    const price = 26.90;
+    const price = 31.00;
     const img = 'IM/CAL.jpg';
 
     cartApp.addItem(name, price, img, '', btn);
